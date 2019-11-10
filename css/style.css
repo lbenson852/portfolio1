@@ -51,7 +51,7 @@ nav {
   margin: auto;
 }
 nav a.active-page {
-  color: #1e05e0;
+  color:white;
 }
 /* applied after scroll height reached */
 .fixed-nav nav {
@@ -174,6 +174,7 @@ nav ul li a {
   height: 100%;
 }
 
+
 .talkbubble {
   width: 140px;
   height: 250px;
@@ -273,10 +274,12 @@ nav ul li a {
   overflow: hidden;
 }
 
+/* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
 }
 
+/* Hide the images by default */
 .mySlides {
   display: none;
   margin: 5px;
@@ -356,6 +359,7 @@ nav ul li a {
   width: auto;
 }
 
+/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -416,7 +420,7 @@ input {
 button[type="submit"] {
   margin-top: 25px;
   padding: 5px 15px;
-  background: #1e05e0;
+  background:  #1e05e0;
   border: 2px solid lightblue;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -487,54 +491,55 @@ footer {
     right: 0;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    border-radius: 10px;
-  }
+    border-radius: 10px;}
 
-  .mySlides img {
-    height: 200px;
-    width: auto;
-  }
+    .mySlides img {
+      height: 200px;
+      width: auto;
+    }
+  
+    .mySlides1 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides2 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides3 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides4 img {
+      height: 300px;
+      width: auto;
+    } 
+    .mySlides3 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides4 img {
+      height: 300px;
+      width: auto;
+    } 
+    .mySlides5 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides6 img {
+      height: 300px;
+      width: auto;
+    } 
+    nav a.active-page {
+      color:#1e05e0;
+    }
 
-  .mySlides1 img {
-    height: 300px;
-    width: auto;
-  }
-
-  .mySlides2 img {
-    height: 300px;
-    width: auto;
-  }
-
-  .mySlides3 img {
-    height: 300px;
-    width: auto;
-  }
-
-  .mySlides4 img {
-    height: 300px;
-    width: auto;
-  }
-  .mySlides3 img {
-    height: 300px;
-    width: auto;
-  }
-
-  .mySlides4 img {
-    height: 300px;
-    width: auto;
-  }
-  .mySlides5 img {
-    height: 300px;
-    width: auto;
-  }
-
-  .mySlides6 img {
-    height: 300px;
-    width: auto;
-  }
-}
-
-@media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
   /* #Experiences {
     color: white;
     font-size: 2em;
@@ -546,13 +551,13 @@ footer {
     margin: 0 auto;
     width: 100%;
     height: 60px;
-    background-color: gold;
+    background-color:gold;
     border-radius: 20px;
   }
 
   /* applied after scroll height reached */
   .fixed-nav nav {
-    position: fixed;
+    position: fixed; 
     top: 0;
     z-index: 1;
   }
@@ -577,7 +582,7 @@ footer {
     display: block;
     font-family: Gochi Hand;
     font-size: 25px;
-    color: black;
+    color:black;
     text-decoration: none;
     padding: 10px 20px;
   }
@@ -599,6 +604,7 @@ footer {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 5px;
+    
   }
   .grid-item {
     background-color: rgba(0, 0, 0, 0.8);
@@ -608,19 +614,20 @@ footer {
     font-size: 10px;
     text-align: center;
   }
-  #id3 {
+  #id3{
+    display: none;
+
+  }
+  #id6{
     display: none;
   }
-  #id6 {
+  #id9{
     display: none;
   }
-  #id9 {
+  #id12{
     display: none;
   }
-  #id12 {
-    display: none;
-  }
-  #id15 {
+  #id15{
     display: none;
   }
   .mySlides img {
@@ -655,7 +662,7 @@ footer {
   .mySlides6 img {
     height: 200px;
     width: auto;
-  }
+  } 
 
   fieldset {
     display: flex;
@@ -666,16 +673,20 @@ footer {
     width: 70%;
     display: block;
   }
-  textarea {
+  textarea{
     width: 70%;
   }
-}
-@media (prefers-reduced-motion: reduce) {
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: none;
+  nav a.active-page {
+    color:#1e05e0;
   }
-}
+  @media (prefers-reduced-motion: reduce) {
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.9s;
+      transform-style: preserve-3d;
+    }
+    
+  }
