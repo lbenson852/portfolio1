@@ -1,0 +1,638 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  background-color: black;
+  background-size: 100%;
+  background-repeat: repeat;
+}
+
+h1 {
+  font-size: 3em;
+  color: gold;
+  margin: 35px;
+  text-align: center;
+}
+
+a.skip {
+  left: -500px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+  text-decoration: none;
+}
+
+.skip:focus {
+  color: white;
+  background-color: gold;
+  left: auto;
+  top: auto;
+  width: 20%;
+  height: auto;
+  overflow: auto;
+  margin: 10px 35%;
+  padding: 5px;
+  text-align: center;
+  font-size: 2em;
+  z-index: 999;
+}
+
+nav {
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  margin: auto;
+}
+nav a.active-page {
+  color: white;
+}
+/* applied after scroll height reached */
+.fixed-nav nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav img {
+  height: 150px;
+  width: 200px;
+  float: left;
+}
+
+nav ul {
+  float: left;
+}
+
+nav ul li {
+  float: left;
+  /* list-style: none; */
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  /* font-family: Noto Sans JP; */
+  /* what is this? */
+  font-size: 50px;
+  color: gold;
+  padding: 50px 50px;
+  text-decoration: none;
+}
+
+/* experiences */
+
+#Experiences {
+  color: white;
+  font-size: 4em;
+  margin: 10px auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 1, 0, 0.8);
+  color: gold;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item img {
+  width: 200px;
+  height: auto;
+}
+
+.rotateimg90 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* About Page */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  margin: 40px auto;
+  background-color: transparent;
+  width: 700px;
+  height: 700px;
+  perspective: 900px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front img {
+  height: 100%;
+}
+
+.flip-card-back {
+  background-color: black;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+  height: 100%;
+}
+
+
+.talkbubble {
+  width: 140px;
+  height: 250px;
+  background: gold;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  font-size: 25px;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.talkbubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid gold;
+  border-bottom: 13px solid transparent;
+}
+.star-five {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: gold;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
+.star-five:before {
+  color: gold;
+  border-bottom: 80px solid gold;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: "";
+  bottom: 100%;
+  transform: rotate(-35deg);
+}
+.star-five:after {
+  position: absolute;
+  display: block;
+  color: gold;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid gold;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: "";
+}
+
+/* Shop page */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  font-size: 3em;
+  font-family: Arial;
+  background-color: white;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid black;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: gold;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: white;
+  border-radius: 30%;
+  padding: 0 20px;
+  display: none;
+  overflow: hidden;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  margin: 5px;
+}
+
+.mySlides1 {
+  display: none;
+  margin: 5px;
+}
+
+.mySlides2 {
+  display: none;
+  margin: 5px;
+}
+
+.mySlides3 {
+  display: none;
+  margin: 5px;
+}
+
+.mySlides4 {
+  display: none;
+  margin: 5px;
+}
+
+.mySlides5 {
+  display: none;
+  margin: 5px;
+}
+
+.mySlides6 {
+  display: none;
+  margin: 5px;
+}
+
+.trav {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  max-height: 500px;
+}
+
+.mySlides img {
+  height: 500px;
+  width: auto;
+}
+
+.mySlides1 img {
+  height: 500px;
+  width: auto;
+}
+
+.mySlides2 img {
+  height: 500px;
+  width: auto;
+}
+
+.mySlides3 img {
+  height: 500px;
+  width: auto;
+}
+
+.mySlides4 img {
+  height: 500px;
+  width: auto;
+}
+
+.mySlides5 img {
+  height: 500px;
+  width: auto;
+}
+
+.mySlides6 img {
+  height: 500px;
+  width: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* forms */
+.header {
+  color: gold;
+  font-size: 27px;
+  padding: 10px;
+}
+
+.bigicon {
+  font-size: 35px;
+  color: gold;
+  padding-left: 2%;
+}
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+}
+.form-horizontal {
+  display: flex;
+  justify-content: center;
+}
+legend {
+  text-align: center;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+input {
+  width: 109%;
+  display: block;
+}
+button[type="submit"] {
+  margin-top: 25px;
+  padding: 5px 15px;
+  background: gold;
+  border: 2px solid lightblue;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  color: gold;
+  font-size: 2em;
+}
+@media screen and (max-width: 1000px) {
+  nav {
+    background-color: gray;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 80px;
+  }
+
+  .fixed-nav nav {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  nav img {
+    height: 80px;
+    width: auto;
+    float: left;
+  }
+
+  nav ul {
+    float: left;
+  }
+
+  nav ul li {
+    float: left;
+    position: relative;
+  }
+
+  nav ul li a {
+    display: block;
+
+    font-size: 35px;
+    color: gold;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  .flip-card {
+    margin: 40px auto;
+    background-color: transparent;
+    width: 450px;
+    height: 450px;
+    perspective: 900px;
+  }
+  .talkbubble {
+    width: 70px;
+    height: 250px;
+    background: gold;
+    position: absolute;
+    top: 0;
+    padding: 210x;
+    font-size: 20px;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;}
+
+    .mySlides img {
+      height: 200px;
+      width: auto;
+    }
+  
+    .mySlides1 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides2 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides3 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides4 img {
+      height: 300px;
+      width: auto;
+    } 
+    .mySlides3 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides4 img {
+      height: 300px;
+      width: auto;
+    } 
+    .mySlides5 img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .mySlides6 img {
+      height: 300px;
+      width: auto;
+    } 
+    
+
+  @media screen and (max-width: 600px) {
+  /* #Experiences {
+    color: white;
+    font-size: 2em;
+    margin: 10px auto;
+  } */
+
+  nav {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+    background-color:gold;
+    border-radius: 20px;
+  }
+
+  /* applied after scroll height reached */
+  .fixed-nav nav {
+    position: fixed; 
+    top: 0;
+    z-index: 1;
+  }
+
+  nav img {
+    height: 60px;
+    width: auto;
+    float: left;
+  }
+
+  nav ul {
+    float: left;
+  }
+
+  nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+  }
+
+  nav ul li a {
+    display: block;
+    font-family: Gochi Hand;
+    font-size: 25px;
+    color:black;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+
+  .talkbubble {
+    width: 120px;
+    height: 190px;
+    background: gold;
+    position: absolute;
+    top: -9999px;
+    bottom: 0;
+    left: -9999px;
+    right: 0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+  .mySlides img {
+    height: 200px;
+    width: auto;
+  }
+
+  .mySlides1 img {
+    height: 200px;
+    width: auto;
+  }
+
+  .mySlides2 img {
+    height: 200px;
+    width: auto;
+  }
+
+  .mySlides3 img {
+    height: 200px;
+    width: auto;
+  }
+
+  .mySlides4 img {
+    height: 200px;
+    width: auto;
+  }
+
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+  }
+  input {
+    width: 60%;
+    display: block;
+  }
