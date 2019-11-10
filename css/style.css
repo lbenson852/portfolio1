@@ -51,7 +51,7 @@ nav {
   margin: auto;
 }
 nav a.active-page {
-  color: white;
+  color:#1e05e0;
 }
 /* applied after scroll height reached */
 .fixed-nav nav {
@@ -143,7 +143,9 @@ nav ul li a {
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
 /* Position the front and back side */
 .flip-card-front {
   position: absolute;
@@ -418,7 +420,7 @@ input {
 button[type="submit"] {
   margin-top: 25px;
   padding: 5px 15px;
-  background: gold;
+  background:  #1e05e0;
   border: 2px solid lightblue;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -598,8 +600,33 @@ footer {
   }
   .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+    
+  }
+  .grid-item {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 1, 0, 0.8);
+    color: gold;
     padding: 10px;
+    font-size: 10px;
+    text-align: center;
+  }
+  #id3{
+    display: none;
+
+  }
+  #id6{
+    display: none;
+  }
+  #id9{
+    display: none;
+  }
+  #id12{
+    display: none;
+  }
+  #id15{
+    display: none;
   }
   .mySlides img {
     height: 200px;
@@ -625,7 +652,15 @@ footer {
     height: 200px;
     width: auto;
   }
+  .mySlides5 img {
+    height: 200px;
+    width: auto;
+  }
 
+  .mySlides6 img {
+    height: 200px;
+    width: auto;
+  } 
 
   fieldset {
     display: flex;
@@ -633,6 +668,9 @@ footer {
     width: 10%;
   }
   input {
-    width: 60%;
+    width: 70%;
     display: block;
+  }
+  textarea{
+    width: 70%;
   }
