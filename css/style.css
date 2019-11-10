@@ -23,7 +23,7 @@ a.skip {
 }
 
 .skip:focus {
-  color: white;
+  color: black;
   background-color: gold;
   left: auto;
   top: auto;
