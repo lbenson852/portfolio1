@@ -549,7 +549,7 @@ footer {
   }
 
   nav ul {
-    float: left;
+    float: inherit;
   }
 
   nav ul li {
@@ -561,7 +561,7 @@ footer {
   nav ul li a {
     display: block;
 
-    font-size: 20px;
+    font-size: 16px;
     color: black;
     text-decoration: none;
     padding: 10px 20px;
