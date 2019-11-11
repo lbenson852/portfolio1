@@ -11,7 +11,7 @@ h1 {
   text-align: center;
 }
 
-/* a.skip {
+a.skip {
   left: -500px;
   position: absolute;
   top: auto;
@@ -20,9 +20,9 @@ h1 {
   overflow: hidden;
   z-index: -999;
   text-decoration: none;
-} */
+}
 
-.skip {
+.skip:focus {
   color: black;
   background-color: gold;
   left: 100 px;
