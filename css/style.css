@@ -414,7 +414,7 @@ footer {
 }
 @media screen and (max-width: 1000px) {
   nav {
-    background-color: gray;
+    background-color: #1e05e0;
     text-align: center;
     margin: auto;
     width: 100%;
@@ -516,7 +516,7 @@ footer {
     width: auto;
   }
   nav a.active-page {
-    color: #1e05e0;
+    color: white;
   }
 }
 
