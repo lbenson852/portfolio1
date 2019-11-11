@@ -25,7 +25,7 @@ a.skip {
 .skip:focus {
   color: black;
   background-color: gold;
-  left: 300px;
+  left: 500px;
   top: auto;
   width: 20%;
   height: auto;
@@ -66,14 +66,13 @@ nav ul {
 
 nav ul li {
   float: left;
-
   position: relative;
 }
 
 nav ul li a {
   display: block;
-  font-size: 50px;
   color: gold;
+  font-size: 50px;
   padding: 50px 50px;
   text-decoration: none;
 }
