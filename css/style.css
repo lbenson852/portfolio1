@@ -23,8 +23,8 @@ a.skip {
 }
 
 .skip:focus {
-  color: black;
-  background-color: white;
+  color: blue;
+  background-color: red;
   left: 500px;
   top: auto;
   width: 20%;
